@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lfabbian <lfabbian@student.42.fr>          +#+  +:+       +#+        */
+/*   By: alaualik <alaualik@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/16 12:27:28 by lfabbian          #+#    #+#             */
-/*   Updated: 2022/12/04 16:37:19 by lfabbian         ###   ########.fr       */
+/*   Created: 2024/12/08 06:52:04 by alaualik          #+#    #+#             */
+/*   Updated: 2024/12/08 06:52:36 by alaualik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

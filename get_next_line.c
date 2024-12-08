@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alaualik <alaualik@42angouleme.fr>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/08 06:49:44 by alaualik          #+#    #+#             */
+/*   Updated: 2024/12/08 06:50:15 by alaualik         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "get_next_line.h"
 
 char	*get_next_line(int fd)
@@ -103,21 +115,4 @@ char	*extract_line(char *stash, char *line)
 	}
 	line[i] = 0;
 	return (line);
-}
-
-int main(void)
-{
-	int	fd;
-
-	fd = open("text.txt", O_RDONLY);
-	printf("GNL 1: %s", get_next_line(fd));
-	printf("GNL 2: %s", get_next_line(fd));
-	printf("GNL 3: %s", get_next_line(fd));
-	printf("GNL 4: %s", get_next_line(fd));
-	printf("GNL 5: %s", get_next_line(fd));
-	printf("GNL 6: %s", get_next_line(fd));
-	printf("GNL 7: %s", get_next_line(fd));
-	printf("GNL 8: %s", get_next_line(fd));
-	printf("GNL 9: %s", get_next_line(fd));
-	close(fd);
 }

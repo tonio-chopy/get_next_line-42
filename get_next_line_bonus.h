@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lfabbian <lfabbian@student.42.fr>          +#+  +:+       +#+        */
+/*   By: alaualik <alaualik@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/11 14:37:34 by lfabbian          #+#    #+#             */
-/*   Updated: 2022/12/11 14:47:31 by lfabbian         ###   ########.fr       */
+/*   Created: 2024/12/08 06:51:42 by alaualik          #+#    #+#             */
+/*   Updated: 2024/12/08 06:51:54 by alaualik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <fcntl.h>
-# include <stdio.h>
 
 char	*get_next_line(int fd);
 char	*stash_filling(int fd, char *stash, char *buffer);
