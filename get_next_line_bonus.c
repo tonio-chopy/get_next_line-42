@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaualik <alaualik@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/08 06:51:20 by alaualik          #+#    #+#             */
-/*   Updated: 2024/12/08 06:51:25 by alaualik         ###   ########.fr       */
+/*   Created: 2024/11/22 18:45:50 by alaualik          #+#    #+#             */
+/*   Updated: 2024/12/15 16:10:31 by alaualik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,21 +19,17 @@ char	*get_next_line(int fd)
 	char		*buffer;
 
 	line = NULL;
-	buffer = malloc((BUFFER_SIZE + 1) * sizeof(char));
-	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, 0) < 0)
-	{
-		free(stash[fd]);
-		free(buffer);
-		stash[fd] = NULL;
+	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	}
+	buffer = malloc((BUFFER_SIZE + 1) * sizeof(char));
 	if (!buffer)
 		return (NULL);
 	stash[fd] = stash_filling(fd, stash[fd], buffer);
-	if (*stash[fd] == 0)
+	if (stash[fd] == 0 || *stash[fd] == 0)
 	{
 		free (stash[fd]);
-		return (stash[fd] = 0);
+		stash[fd] = NULL;
+		return (stash[fd]);
 	}
 	line = extract_line(stash[fd], line);
 	stash[fd] = extract_new_stash(stash[fd]);
@@ -52,6 +48,7 @@ char	*stash_filling(int fd, char *stash, char *buffer)
 		nbytes = read(fd, buffer, BUFFER_SIZE);
 		if (nbytes == -1)
 		{
+			free (stash);
 			free (buffer);
 			return (NULL);
 		}

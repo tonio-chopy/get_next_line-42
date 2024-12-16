@@ -5,15 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaualik <alaualik@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/08 06:51:42 by alaualik          #+#    #+#             */
-/*   Updated: 2024/12/08 06:51:54 by alaualik         ###   ########.fr       */
+/*   Created: 2024/11/22 18:46:39 by alaualik          #+#    #+#             */
+/*   Updated: 2024/12/15 15:31:00 by alaualik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_BONUS_H
 # define GET_NEXT_LINE_BONUS_H
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 5
+#  define BUFFER_SIZE 20
 # endif
 # define MAX_FD 10240
 # include <stdlib.h>
